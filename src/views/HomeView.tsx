@@ -1,5 +1,5 @@
 import { Box } from "@mui/material"
-import React, { useMemo, useState } from "react"
+import React, { useState } from "react"
 import SearchWidget from "../widgets/searh/SearchWidget"
 
 import "./HomeView.scss"
@@ -31,7 +31,6 @@ export default function HomeView(): JSX.Element {
 			const upListRelated = [...listFindVideo.slice(1), ...prevVideo]
 			//delete same video
 			const cleanList: IRestAPIData[] = []
-
 			upListRelated.forEach((el) => {
 				const isExist = cleanList.find((item) => item.id === el.id)
 				if (!isExist) cleanList.push(el)

@@ -20,7 +20,6 @@ export default function SearchWidget({ seachVideo }: IProps) {
 
 	function onConfirm(event: any): void {
 		event.preventDefault()
-
 		seachVideo(dataInput)
 	}
 
